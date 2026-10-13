@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol — generative Sol LeWitt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="stage"><canvas id="canvas"></canvas></div>
+  <aside>
+    <nav id="nav"></nav>
+    <h1 id="title"></h1>
+    <p id="meta"></p>
+    <blockquote id="instruction"></blockquote>
+    <p id="reading"></p>
+
+    <div id="params"></div>
+    <label>Drawing speed <span id="speedOut"></span>
+      <input type="range" id="speed" min="1" max="10" value="5">
+    </label>
+    <label class="check"><input type="checkbox" id="animate" checked> Watch it being drawn</label>
+
+    <div class="buttons">
+      <button class="primary" id="new">New drawing</button>
+      <button id="redraw">Redraw</button>
+      <button id="png">Save PNG</button>
+      <button id="svg">Save SVG</button>
+    </div>
+    <div id="status"></div>
+  </aside>
+</main>
+
+<script src="js/core.js"></script>
+<script src="js/pieces/copied-lines.js"></script>
+<script src="js/pieces/ten-thousand-lines.js"></script>
+<script src="js/pieces/not-touching.js"></script>
+<script>Sol.start();</script>
+</body>
+</html>
